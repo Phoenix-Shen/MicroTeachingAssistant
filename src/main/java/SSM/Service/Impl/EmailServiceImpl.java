@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service("emailService")
 public class EmailServiceImpl implements EmailService {
-    private IEmailDao iEmailDao;
+    private final IEmailDao iEmailDao;
 
     @Autowired
     private EmailServiceImpl(IEmailDao iEmailDao){

@@ -1,7 +1,7 @@
 package SSM.Service;
 
 import SSM.Domain.Teacher;
-import org.apache.ibatis.annotations.*;
+
 
 import java.sql.SQLException;
 import java.util.List;

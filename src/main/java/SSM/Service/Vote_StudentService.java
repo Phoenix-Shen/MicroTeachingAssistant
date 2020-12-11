@@ -1,7 +1,7 @@
 package SSM.Service;
 
 import SSM.Domain.Vote_Student;
-import org.apache.ibatis.annotations.*;
+
 
 import java.util.List;
 

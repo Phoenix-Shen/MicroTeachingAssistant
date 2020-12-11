@@ -1,7 +1,6 @@
 package SSM.Service.Impl;
 
 import SSM.Dao.IVoteDao;
-import SSM.Dao.IVoteOptionDao;
 import SSM.Domain.Vote;
 import SSM.Service.VoteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,7 @@ import java.util.List;
 @Service("voteService")
 public class VoteServiceImpl implements VoteService {
 
-    private IVoteDao ivoteDao;
+    private final IVoteDao ivoteDao;
 
     @Autowired
     public VoteServiceImpl(IVoteDao ivoteDao) {

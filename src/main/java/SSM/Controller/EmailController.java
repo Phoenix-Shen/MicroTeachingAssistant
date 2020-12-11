@@ -13,20 +13,18 @@ import java.util.List;
 @Controller
 @RequestMapping("/Email")
 public class EmailController {
-    private EmailService emailService;
+    private final EmailService emailService;
     @Autowired
     public EmailController(EmailService emailService){
         this.emailService=emailService;
     }
     @RequestMapping("findAll")
     public @ResponseBody List<Email> findAll(){
-        List<Email> emailList=emailService.findAll();
-        return emailList;
+        return emailService.findAll();
     }
     @RequestMapping("findOne")
     public @ResponseBody Email findOne(@RequestBody int EID){
-        Email email=emailService.findOne(EID);
-        return email;
+        return emailService.findOne(EID);
     }
     @RequestMapping("updateEmail")
     public @ResponseBody String updateEmail(@RequestBody Email email){

@@ -12,7 +12,7 @@ import java.util.List;
 @Service("teacherService")
 public class TeacherServiceImpl implements TeacherService {
 
-    private ITeacherDao iTeacherDao;
+    private final ITeacherDao iTeacherDao;
 
     @Autowired
     public TeacherServiceImpl(ITeacherDao iTeacherDao){

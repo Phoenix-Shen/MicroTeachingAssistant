@@ -1,6 +1,6 @@
 package SSM.Dao;
 
-import SSM.Domain.CheckIn;
+
 import SSM.Domain.Email;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;

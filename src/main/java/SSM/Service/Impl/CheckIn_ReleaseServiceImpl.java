@@ -16,7 +16,7 @@ public class CheckIn_ReleaseServiceImpl implements CheckIn_ReleaseService {
     private ICheckIn_ReleaseDao iCheckIn_releaseDao;*/
 
     /*现在推荐使用构造函数注入 或者Setter注入*/
-    private ICheckIn_ReleaseDao iCheckIn_releaseDao;
+    private final ICheckIn_ReleaseDao iCheckIn_releaseDao;
 
     @Autowired
     public CheckIn_ReleaseServiceImpl(ICheckIn_ReleaseDao iCheckIn_releaseDao){

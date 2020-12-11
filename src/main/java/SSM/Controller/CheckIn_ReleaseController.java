@@ -3,8 +3,6 @@ import SSM.Domain.CheckIn_Release;
 import SSM.Service.CheckIn_ReleaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -16,7 +14,7 @@ import java.util.List;
 @RequestMapping("/CheckIn_Release")
 public class CheckIn_ReleaseController {
 
-    private CheckIn_ReleaseService checkIn_ReleaseService;
+    private final CheckIn_ReleaseService checkIn_ReleaseService;
     @Autowired
     public CheckIn_ReleaseController(CheckIn_ReleaseService checkIn_releaseService) {
         this.checkIn_ReleaseService = checkIn_releaseService;
@@ -24,14 +22,12 @@ public class CheckIn_ReleaseController {
 
     @RequestMapping("/findAll")
     public @ResponseBody List<CheckIn_Release> findAll() throws SQLException {
-        List<CheckIn_Release> checkIn_Releases = checkIn_ReleaseService.findAll();
-        return checkIn_Releases;
+        return checkIn_ReleaseService.findAll();
     }
 
     @RequestMapping("/findOne")
-    public @ResponseBody CheckIn_Release findOne( @RequestBody String CID) throws SQLException {
-        CheckIn_Release checkIn_Release=checkIn_ReleaseService.findOne(Integer.parseUnsignedInt(CID));
-        return checkIn_Release;
+    public @ResponseBody CheckIn_Release findOne( @RequestBody int CID) throws SQLException {
+        return checkIn_ReleaseService.findOne(CID);
     }
 
     @RequestMapping("/createCheckIn_Release")

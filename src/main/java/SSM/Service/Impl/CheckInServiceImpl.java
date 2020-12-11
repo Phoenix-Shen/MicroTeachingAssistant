@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service("checkInService")
 public class CheckInServiceImpl implements CheckInService {
-    private ICheckInDao icheckInDao;
+    private final ICheckInDao icheckInDao;
 
     @Autowired
     public CheckInServiceImpl(ICheckInDao icheckInDao){

@@ -1,8 +1,8 @@
 package SSM.Service;
 
-import SSM.Domain.Vote;
+
 import SSM.Domain.VoteOption;
-import org.apache.ibatis.annotations.*;
+
 
 import java.util.List;
 

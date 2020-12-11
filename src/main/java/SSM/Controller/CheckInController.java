@@ -2,7 +2,6 @@ package SSM.Controller;
 
 import SSM.Domain.CheckIn;
 import SSM.Service.CheckInService;
-import SSM.Service.CheckIn_ReleaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,7 +14,7 @@ import java.util.List;
 @RequestMapping("/CheckIn")
 public class CheckInController {
 
-    private CheckInService checkInService;
+    private final CheckInService checkInService;
     @Autowired
     public CheckInController(CheckInService checkInService){
         this.checkInService=checkInService;
@@ -23,13 +22,11 @@ public class CheckInController {
 
     @RequestMapping("/findAll")
     public @ResponseBody List<CheckIn> findAll(){
-        List<CheckIn> checkInList =checkInService.findAll();
-        return checkInList;
+        return checkInService.findAll();
     }
     @RequestMapping("/findOne")
     public @ResponseBody CheckIn findOne(@RequestBody int CID,@RequestBody int STUID){
-        CheckIn checkin = checkInService.findOne(CID,STUID);
-        return checkin;
+        return checkInService.findOne(CID,STUID);
     }
     @RequestMapping("/updateCheckIn")
     public @ResponseBody String updateCheckIn(@RequestBody CheckIn checkIn){

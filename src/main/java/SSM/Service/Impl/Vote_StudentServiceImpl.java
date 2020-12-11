@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service("vote_StudentService")
 public class Vote_StudentServiceImpl implements Vote_StudentService {
-    private IVote_StudentDao iv_StudentDao;
+    private final IVote_StudentDao iv_StudentDao;
 
     @Autowired
     public Vote_StudentServiceImpl(IVote_StudentDao iv_StudentDao){

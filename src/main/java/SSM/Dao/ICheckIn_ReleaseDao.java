@@ -1,7 +1,6 @@
 package SSM.Dao;
 
 import SSM.Domain.CheckIn_Release;
-import SSM.Domain.Teacher;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 

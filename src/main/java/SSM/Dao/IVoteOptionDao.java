@@ -1,6 +1,4 @@
 package SSM.Dao;
-
-import SSM.Domain.Vote;
 import SSM.Domain.VoteOption;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
