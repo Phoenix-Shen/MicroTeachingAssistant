@@ -37,7 +37,7 @@ public class EmailServiceImpl implements EmailService {
     }
 
     @Override
-    public void deleteCheckIn(int EID) {
-        iEmailDao.deleteCheckIn(EID);
+    public void deleteEmail(int EID) {
+        iEmailDao.deleteEmail(EID);
     }
 }

@@ -10,5 +10,5 @@ public interface EmailService {
     Email findOne(int EID);
     void updateEmail(Email email);
     void createEmail(Email email);
-    void deleteCheckIn(int EID);
+    void deleteEmail(int EID);
 }

@@ -28,12 +28,27 @@ public class CheckIn_ReleaseController {
         return checkIn_Releases;
     }
 
-    @RequestMapping("/findOne/{CID}")
-    public String findOne(Model model, @PathVariable String CID) throws SQLException {
+    @RequestMapping("/findOne")
+    public @ResponseBody CheckIn_Release findOne( @RequestBody String CID) throws SQLException {
         CheckIn_Release checkIn_Release=checkIn_ReleaseService.findOne(Integer.parseUnsignedInt(CID));
-        return "success";
+        return checkIn_Release;
     }
 
+    @RequestMapping("/createCheckIn_Release")
+    public @ResponseBody String createCheckIn_Release(@RequestBody CheckIn_Release checkInRelease)throws SQLException{
+        checkIn_ReleaseService.createCheckIn_Release(checkInRelease);
+        return "succeed";
+    }
+    @RequestMapping("/deleteCheckIn_Release")
+    public @ResponseBody String deleteCheckIn_Release(@RequestBody int CID)throws SQLException{
+        checkIn_ReleaseService.deleteCheckIn_Release(CID);
+        return "succeed";
+    }
+    @RequestMapping("/updateCheckIn_Release")
+    public @ResponseBody String updateCheckIn_Release(@RequestBody CheckIn_Release checkInRelease){
+        checkIn_ReleaseService.updateCheckIn_Release(checkInRelease);
+        return "succeed";
+    }
 
 
 

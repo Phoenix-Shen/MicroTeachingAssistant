@@ -24,5 +24,5 @@ public interface IEmailDao {
     @Insert("Insert into email (TID,sender,sendtime,etitle) values(#{TID},#{Sender},#{SendTime},#{ETitle})")
     void createEmail(Email email);
     @Delete("Delete from email where EID=#{EID}")
-    void deleteCheckIn(@Param("EID")int EID);
+    void deleteEmail(@Param("EID")int EID);
 }

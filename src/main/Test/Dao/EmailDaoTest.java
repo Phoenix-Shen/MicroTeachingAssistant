@@ -60,6 +60,6 @@ public class EmailDaoTest {
     public void deleteEmail(){
         ApplicationContext ac = new ClassPathXmlApplicationContext("SqlMappingConfig.xml");
         iemailDao = (IEmailDao) ac.getBean("IEmailDao");
-        iemailDao.deleteCheckIn(1);
+        iemailDao.deleteEmail(1);
     }
 }
