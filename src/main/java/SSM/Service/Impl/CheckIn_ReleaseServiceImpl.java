@@ -17,7 +17,7 @@ public class CheckIn_ReleaseServiceImpl implements CheckIn_ReleaseService {
 
     /*现在推荐使用构造函数注入 或者Setter注入*/
     private final ICheckIn_ReleaseDao iCheckIn_releaseDao;
-
+//    即使不声明Autowired，在这里也会自动注入，可以看到左边有个绿色的东西，点进去就可以找到我们自动注入的类
     @Autowired
     public CheckIn_ReleaseServiceImpl(ICheckIn_ReleaseDao iCheckIn_releaseDao){
         this.iCheckIn_releaseDao = iCheckIn_releaseDao;
