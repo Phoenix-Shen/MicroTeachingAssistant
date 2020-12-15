@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>SPRING</ID>
+  <OriginalElement>appContextPath=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;appContextName=springmvc</OriginalElement>
+  <nodes>
+    <node x="246.0" y="1286.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;tag=mvc:annotation-driven;offset=1376</node>
+    <node x="0.0" y="675.5">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]</node>
+    <node x="228.0" y="854.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.Vote_StudentController;bean_name=vote_StudentController</node>
+    <node x="236.5" y="793.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.Vote_StudentServiceImpl;bean_name=vote_StudentService</node>
+    <node x="245.0" y="549.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.CheckInController;bean_name=checkInController</node>
+    <node x="253.5" y="610.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.CheckInServiceImpl;bean_name=checkInService</node>
+    <node x="233.5" y="0.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.VoteOptionController;bean_name=voteOptionController</node>
+    <node x="242.0" y="61.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.VoteOptionServiceImpl;bean_name=voteOptionService</node>
+    <node x="254.0" y="1037.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.VoteController;bean_name=voteController</node>
+    <node x="262.5" y="976.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.VoteServiceImpl;bean_name=voteService</node>
+    <node x="245.0" y="366.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.TeacherController;bean_name=teacherController</node>
+    <node x="253.5" y="427.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.TeacherServiceImpl;bean_name=teacherService</node>
+    <node x="251.5" y="1220.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.EmailController;bean_name=emailController</node>
+    <node x="260.0" y="1159.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.EmailServiceImpl;bean_name=emailService</node>
+    <node x="220.0" y="183.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.CheckIn_ReleaseController;bean_name=checkIn_ReleaseController</node>
+    <node x="228.5" y="244.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.CheckIn_ReleaseServiceImpl;bean_name=checkIn_ReleaseService</node>
+    <node x="512.0" y="976.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.IVoteDao;bean_name=IVoteDao</node>
+    <node x="491.5" y="61.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.IVoteOptionDao;bean_name=IVoteOptionDao</node>
+    <node x="478.0" y="244.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.ICheckIn_ReleaseDao;bean_name=ICheckIn_ReleaseDao</node>
+    <node x="503.5" y="610.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.ICheckInDao;bean_name=ICheckInDao</node>
+    <node x="511.0" y="1159.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.IEmailDao;bean_name=IEmailDao</node>
+    <node x="503.0" y="427.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.ITeacherDao;bean_name=ITeacherDao</node>
+    <node x="486.0" y="793.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.IVote_StudentDao;bean_name=IVote_StudentDao</node>
+    <node x="486.0" y="1286.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=org.springframework.web.servlet.resource.ResourceHttpRequestHandler;tag=mvc:resources;offset=1188</node>
+    <node x="678.0" y="1286.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=org.springframework.web.servlet.resource.ResourceHttpRequestHandler;tag=mvc:resources;offset=1242</node>
+    <node x="870.0" y="1286.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=org.springframework.web.servlet.resource.ResourceHttpRequestHandler;tag=mvc:resources;offset=1294</node>
+    <node x="0.0" y="1286.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=org.springframework.web.servlet.view.InternalResourceViewResolver;bean_name=InternalResourceViewResolver</node>
+    <node x="1232.0" y="0.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=org.springframework.transaction.interceptor.TransactionInterceptor;bean_name=txAdvice</node>
+    <node x="1027.0" y="0.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;tag=aop:config;offset=2869</node>
+    <node x="891.0" y="30.5">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=com.mchange.v2.c3p0.ComboPooledDataSource;bean_name=dataSource</node>
+    <node x="676.5" y="61.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=org.mybatis.spring.SqlSessionFactoryBean;bean_name=sqlSessionFactory</node>
+    <node x="1062.0" y="1286.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=org.mybatis.spring.mapper.MapperScannerConfigurer;bean_name=mapperScanner</node>
+    <node x="670.0" y="0.0">module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=org.springframework.jdbc.datasource.DataSourceTransactionManager;bean_name=transactionManager</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.Vote_StudentController;bean_name=vote_StudentController" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.Vote_StudentServiceImpl;bean_name=vote_StudentService">
+      <point x="0.0" y="-10.5" />
+      <point x="0.0" y="10.5" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=org.mybatis.spring.SqlSessionFactoryBean;bean_name=sqlSessionFactory" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=com.mchange.v2.c3p0.ComboPooledDataSource;bean_name=dataSource">
+      <point x="64.0" y="-0.0" />
+      <point x="-45.5" y="5.25" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.VoteOptionController;bean_name=voteOptionController" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.VoteOptionServiceImpl;bean_name=voteOptionService">
+      <point x="0.0" y="10.5" />
+      <point x="0.0" y="-10.5" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.IVoteDao;bean_name=IVoteDao">
+      <point x="70.0" y="5.0" />
+      <point x="220.0" y="920.25" />
+      <point x="-39.5" y="-5.25" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.IVote_StudentDao;bean_name=IVote_StudentDao">
+      <point x="70.0" y="2.25" />
+      <point x="220.0" y="747.75" />
+      <point x="-65.5" y="5.25" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.EmailController;bean_name=emailController">
+      <point x="70.0" y="10.0" />
+      <point x="220.0" y="1230.5" />
+      <point x="-57.5" y="-0.0" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.Vote_StudentServiceImpl;bean_name=vote_StudentService">
+      <point x="70.0" y="3.75" />
+      <point x="220.0" y="808.75" />
+      <point x="-72.5" y="5.25" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.VoteController;bean_name=voteController" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.VoteServiceImpl;bean_name=voteService">
+      <point x="0.0" y="-10.5" />
+      <point x="0.0" y="10.5" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.EmailServiceImpl;bean_name=emailService" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.IEmailDao;bean_name=IEmailDao">
+      <point x="49.0" y="-0.0" />
+      <point x="-40.5" y="-0.0" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.VoteOptionServiceImpl;bean_name=voteOptionService" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.IVoteOptionDao;bean_name=IVoteOptionDao">
+      <point x="0.0" y="10.5" />
+      <point x="0.0" y="-10.5" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.CheckInController;bean_name=checkInController" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.CheckInServiceImpl;bean_name=checkInService">
+      <point x="0.0" y="10.5" />
+      <point x="0.0" y="-10.5" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.Vote_StudentServiceImpl;bean_name=vote_StudentService" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.IVote_StudentDao;bean_name=IVote_StudentDao">
+      <point x="0.0" y="-10.5" />
+      <point x="0.0" y="10.5" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.TeacherController;bean_name=teacherController">
+      <point x="70.0" y="-4.0" />
+      <point x="220.0" y="376.5" />
+      <point x="-64.0" y="-0.0" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.CheckIn_ReleaseServiceImpl;bean_name=checkIn_ReleaseService">
+      <point x="70.0" y="-6.75" />
+      <point x="-80.5" y="5.25" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.VoteServiceImpl;bean_name=voteService" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.IVoteDao;bean_name=IVoteDao">
+      <point x="46.5" y="-0.0" />
+      <point x="-39.5" y="-0.0" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.VoteController;bean_name=voteController">
+      <point x="70.0" y="7.0" />
+      <point x="220.0" y="1047.5" />
+      <point x="-55.0" y="-0.0" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.IVoteOptionDao;bean_name=IVoteOptionDao">
+      <point x="70.0" y="-8.0" />
+      <point x="220.0" y="127.25" />
+      <point x="-60.0" y="-5.25" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.VoteOptionController;bean_name=voteOptionController">
+      <point x="70.0" y="-10.0" />
+      <point x="220.0" y="10.5" />
+      <point x="-75.5" y="-0.0" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;tag=aop:config;offset=2869" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=org.springframework.transaction.interceptor.TransactionInterceptor;bean_name=txAdvice">
+      <point x="62.5" y="-0.0" />
+      <point x="-38.0" y="-0.0" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.CheckIn_ReleaseServiceImpl;bean_name=checkIn_ReleaseService" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.ICheckIn_ReleaseDao;bean_name=ICheckIn_ReleaseDao">
+      <point x="80.5" y="-0.0" />
+      <point x="-73.5" y="-0.0" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.Vote_StudentController;bean_name=vote_StudentController">
+      <point x="70.0" y="4.0" />
+      <point x="-81.0" y="-0.0" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.CheckIn_ReleaseController;bean_name=checkIn_ReleaseController">
+      <point x="70.0" y="-7.0" />
+      <point x="-89.0" y="-0.0" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.ICheckInDao;bean_name=ICheckInDao">
+      <point x="70.0" y="1.0" />
+      <point x="220.0" y="676.25" />
+      <point x="-48.0" y="-5.25" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.CheckInController;bean_name=checkInController">
+      <point x="70.0" y="-1.0" />
+      <point x="220.0" y="559.5" />
+      <point x="-64.0" y="-0.0" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=org.springframework.jdbc.datasource.DataSourceTransactionManager;bean_name=transactionManager" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=com.mchange.v2.c3p0.ComboPooledDataSource;bean_name=dataSource">
+      <point x="70.5" y="-0.0" />
+      <point x="-45.5" y="-5.25" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.VoteServiceImpl;bean_name=voteService">
+      <point x="70.0" y="6.75" />
+      <point x="220.0" y="991.75" />
+      <point x="-46.5" y="5.25" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.ICheckIn_ReleaseDao;bean_name=ICheckIn_ReleaseDao">
+      <point x="70.0" y="-5.25" />
+      <point x="220.0" y="320.75" />
+      <point x="-73.5" y="5.25" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.EmailServiceImpl;bean_name=emailService">
+      <point x="70.0" y="9.0" />
+      <point x="220.0" y="1164.25" />
+      <point x="-49.0" y="-5.25" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.CheckIn_ReleaseController;bean_name=checkIn_ReleaseController" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.CheckIn_ReleaseServiceImpl;bean_name=checkIn_ReleaseService">
+      <point x="0.0" y="10.5" />
+      <point x="0.0" y="-10.5" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.IEmailDao;bean_name=IEmailDao">
+      <point x="70.0" y="8.25" />
+      <point x="220.0" y="1113.75" />
+      <point x="-40.5" y="5.25" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.TeacherServiceImpl;bean_name=teacherService">
+      <point x="70.0" y="-3.75" />
+      <point x="220.0" y="442.75" />
+      <point x="-55.5" y="5.25" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.CheckInServiceImpl;bean_name=checkInService" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.ICheckInDao;bean_name=ICheckInDao">
+      <point x="0.0" y="10.5" />
+      <point x="0.0" y="-10.5" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.ITeacherDao;bean_name=ITeacherDao">
+      <point x="70.0" y="-2.0" />
+      <point x="220.0" y="493.25" />
+      <point x="-48.5" y="-5.25" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.CheckInServiceImpl;bean_name=checkInService">
+      <point x="70.0" y="-0.75" />
+      <point x="220.0" y="625.75" />
+      <point x="-55.5" y="5.25" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.TeacherServiceImpl;bean_name=teacherService" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Dao.ITeacherDao;bean_name=ITeacherDao">
+      <point x="55.5" y="-0.0" />
+      <point x="-48.5" y="-0.0" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.TeacherController;bean_name=teacherController" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.TeacherServiceImpl;bean_name=teacherService">
+      <point x="0.0" y="10.5" />
+      <point x="0.0" y="-10.5" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_name=(SSM) [Component]" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.VoteOptionServiceImpl;bean_name=voteOptionService">
+      <point x="70.0" y="-9.75" />
+      <point x="220.0" y="76.75" />
+      <point x="-67.0" y="5.25" />
+    </edge>
+    <edge source="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Controller.EmailController;bean_name=emailController" target="module=MicroTeachingAssistant;context=C:/Users/ssk/Desktop/JavaFinalAssignment/MicroTeachingAssistant/src/main/resources/springmvc.xml;bean_class=SSM.Service.Impl.EmailServiceImpl;bean_name=emailService">
+      <point x="0.0" y="-10.5" />
+      <point x="0.0" y="10.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0048982667671438" x="288.201724784402" y="323.36707911511064" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Local context</Category>
+    <Category>Properties</Category>
+  </Categories>
+</Diagram>
+

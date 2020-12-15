@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * 老师发布签到
+ */
 @Controller
 @RequestMapping("/CheckIn_Release")
 public class CheckIn_ReleaseController {

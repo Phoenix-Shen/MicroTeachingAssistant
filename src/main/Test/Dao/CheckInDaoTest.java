@@ -16,7 +16,7 @@ public class CheckInDaoTest {
         CheckIn ck = new CheckIn();
         ck.setSTUID(1111111);
         ck.setCID(3);
-        ck.setStuName("大大展玮");
+        ck.setStuName("11111");
         ck.setCheckTime(new Date());
         ck.setCheckLocation("武汉");
         iCheckInDao.createCheckIn(ck);
@@ -48,7 +48,7 @@ public class CheckInDaoTest {
         CheckIn ck = new CheckIn();
         ck.setSTUID(1111111);
         ck.setCID(3);
-        ck.setStuName("大大肥肥展玮");
+        ck.setStuName("大大肥肥");
         ck.setCheckTime(new Date());
         ck.setCheckLocation("武汉");
         iCheckInDao.updateCheckIn(ck);

@@ -9,7 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
+import java.util.Map;
 
+/***
+ * 学生向教师发送Email
+ */
 @Controller
 @RequestMapping("/Email")
 public class EmailController {
@@ -36,9 +40,16 @@ public class EmailController {
         emailService.createEmail(email);
         return "succeed";
     }
+
     @RequestMapping("deleteEmail")
     public @ResponseBody String deleteEmail(@RequestBody int EID){
         emailService.deleteEmail(EID);
+        return "succeed";
+    }
+
+    @RequestMapping("sendEmail")
+    public @ResponseBody String sendEmail(@RequestBody Map<String,Object> map){
+        //未实现的方法
         return "succeed";
     }
 }

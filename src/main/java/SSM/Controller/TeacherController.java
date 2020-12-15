@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * 教师管理
+ */
 @Controller
 @RequestMapping("/Teacher")
 public class TeacherController {

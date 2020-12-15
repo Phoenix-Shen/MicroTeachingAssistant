@@ -31,7 +31,7 @@ public class TeacherDaoTest {
         System.out.println(LocalDateTime.now().toString());
         teacher.setName(LocalDateTime.now().toString().substring(10,19));
         teacher.setEmail("165@163.com");
-        teacher.setPassword("大大展玮");
+        teacher.setPassword("111");
         iTeacherDao.createTeacher(teacher);
     }
 
@@ -41,9 +41,9 @@ public class TeacherDaoTest {
         ITeacherDao iTeacherDao = (ITeacherDao)ac.getBean("ITeacherDao");
         Teacher teacher = new Teacher();
         teacher.setID(1);
-        teacher.setName("小小袁脑");
+        teacher.setName("776767");
         teacher.setEmail("165@163.com");
-        teacher.setPassword("大大肥嘴");
+        teacher.setPassword("4566");
         iTeacherDao.updateTeacher(teacher);
     }
 

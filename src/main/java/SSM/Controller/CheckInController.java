@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
+/**
+ * 学生签到
+ */
 @Controller
 @RequestMapping("/CheckIn")
 public class CheckInController {
@@ -43,4 +46,6 @@ public class CheckInController {
         checkInService.deleteCheckIn(CID,STUID);
         return "succeed";
     }
+
+
 }

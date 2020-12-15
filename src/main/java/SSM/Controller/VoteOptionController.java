@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
+/**
+ * 投票的选项类
+ */
 @Controller
 @RequestMapping("/VoteOption")
 public class VoteOptionController {

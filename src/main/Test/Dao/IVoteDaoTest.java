@@ -22,7 +22,7 @@ public class IVoteDaoTest {
         iVoteDao = (IVoteDao) ac.getBean("IVoteDao");
         Vote vote = new Vote();
         vote.setTID(10);
-        vote.setTheme("吃展玮肉");
+        vote.setTheme("1111111");
         vote.setReleaseTime(new Date());
         iVoteDao.createVote(vote);
     }

@@ -17,7 +17,7 @@ public class EmailDaoTest {
         ApplicationContext ac = new ClassPathXmlApplicationContext("SqlMappingConfig.xml");
         iemailDao = (IEmailDao) ac.getBean("IEmailDao");
         Email email=new Email();
-        email.setETitle("吃展玮肉");
+        email.setETitle("44444");
         email.setSender("Pimon");
         email.setSendTime(new Date());
         email.setTID(3);
@@ -49,7 +49,7 @@ public class EmailDaoTest {
         ApplicationContext ac = new ClassPathXmlApplicationContext("SqlMappingConfig.xml");
         iemailDao = (IEmailDao) ac.getBean("IEmailDao");
         Email email=new Email();
-        email.setETitle("吃展玮肉222233");
+        email.setETitle("44444");
         email.setSender("Pimon");
         email.setSendTime(new Date());
         email.setTID(3);

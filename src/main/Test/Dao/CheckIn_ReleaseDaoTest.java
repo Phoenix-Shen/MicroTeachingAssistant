@@ -37,7 +37,7 @@ public class CheckIn_ReleaseDaoTest {
         iCheckIn_releaseDao = (ICheckIn_ReleaseDao) ac.getBean("ICheckIn_ReleaseDao");
         CheckIn_Release cr = new CheckIn_Release();
         cr.setTID(3);
-        cr.setTitle("吃展玮肉");
+        cr.setTitle("1111");
         cr.setStartTime(new Date());
         cr.setEndTime(new Date());
         iCheckIn_releaseDao.createCheckIn_Release(cr);
@@ -50,7 +50,7 @@ public class CheckIn_ReleaseDaoTest {
         CheckIn_Release cr = new CheckIn_Release();
         cr.setCID(2);
         cr.setTID(3);
-        cr.setTitle("吃展玮肉2");
+        cr.setTitle("2222");
         cr.setStartTime(new Date());
         cr.setEndTime(new Date());
         iCheckIn_releaseDao.updateCheckIn_Release(cr);
