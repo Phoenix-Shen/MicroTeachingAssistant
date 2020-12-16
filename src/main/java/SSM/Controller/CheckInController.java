@@ -4,6 +4,7 @@ import SSM.Domain.CheckIn;
 import SSM.Service.CheckInService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -14,6 +15,7 @@ import java.util.List;
  * 学生签到
  */
 @Controller
+@CrossOrigin
 @RequestMapping("/CheckIn")
 public class CheckInController {
 
@@ -33,9 +35,8 @@ public class CheckInController {
     }
 
     @RequestMapping("/findOneListResult")
-    public @ResponseBody String findOneListResult(@RequestBody int CID){
-        checkInService.findOneListResult(CID);
-        return "succeed";
+    public @ResponseBody List<CheckIn> findOneListResult(@RequestBody Integer CID){
+        return checkInService.findOneListResult(CID);
     }
     @RequestMapping("/updateCheckIn")
     public @ResponseBody String updateCheckIn(@RequestBody CheckIn checkIn){

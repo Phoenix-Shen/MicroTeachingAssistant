@@ -2,14 +2,21 @@ package SSM.Controller;
 
 import SSM.Domain.Vote;
 import SSM.Domain.VoteOption;
+import SSM.Service.VoteOptionService;
 import SSM.Service.VoteService;
+import com.alibaba.fastjson.JSON;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
@@ -17,13 +24,15 @@ import java.util.Map;
  * 教师发布投票
  */
 @Controller
+@CrossOrigin
 @RequestMapping("/Vote")
 public class VoteController {
     private final VoteService voteService;
-
+    private final VoteOptionService voteOptionService;
     @Autowired
-    public VoteController(VoteService voteService){
+    public VoteController(VoteService voteService,VoteOptionService voteOptionService){
         this.voteService=voteService;
+        this.voteOptionService=voteOptionService;
     }
 
     @RequestMapping("/findAll")
@@ -55,7 +64,23 @@ public class VoteController {
     }
     @RequestMapping("/createVoteWithOptions")
     public @ResponseBody String createVoteWithOptions(@RequestBody Map<String,Object>map){
-        //未实现的功能
+        System.out.println(map.get("vote"));
+        System.out.println(map.get("options"));
+        Object o =map.get("vote");
+        Object o2=map.get("options");
+        ObjectMapper mapper =new ObjectMapper();
+        Vote vote =mapper.convertValue(o,Vote.class);
+
+        List<VoteOption>options =mapper.convertValue(o2,new TypeReference<List<VoteOption>>(){});
+        voteService.createVote(vote);
+        List<Vote>exists =voteService.findAll();
+        exists.sort(Comparator.comparingInt(Vote::getVID));
+        int VID_PUSH =exists.get(exists.size()-1).getVID();
+        for (VoteOption option:options
+             ) {
+            option.setVID(VID_PUSH);
+            voteOptionService.createVoteOption(option);
+        }
         return "succeed";
     }
 
