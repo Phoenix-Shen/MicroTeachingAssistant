@@ -21,4 +21,6 @@ public interface IVoteDao {
     void createVote(Vote vote);
     @Delete("delete from vote where VID=#{VID}")
     void deleteVote(@Param("VID")int VID);
+    @Select("select * from vote where TID=#{TID}")
+    List<Vote> findVoteByTID(@Param("TID")int TID);
 }

@@ -42,4 +42,9 @@ public class VoteServiceImpl implements VoteService {
     public void deleteVote(int VID) {
         ivoteDao.deleteVote(VID);
     }
+
+    @Override
+    public List<Vote> findVoteByTID(int tID) {
+        return ivoteDao.findVoteByTID(tID);
+    }
 }

@@ -18,6 +18,8 @@ public interface ICheckInDao {
     List<CheckIn>findAll();
     @Select("Select * from checkin where CID=#{CID} and STUID=#{STUID}")
     CheckIn findOne(@Param("CID")int CID,@Param("STUID")int STUID);
+    @Select("Select * from checkin where CID=#{CID}")
+    List<CheckIn>findOneListResult(@Param("CID")int CID);
     @Update("Update checkin set stuname=#{StuName} , checktime=#{CheckTime} , checklocation=#{CheckLocation} where CID=#{CID} and STUID=#{STUID}")
     void updateCheckIn(CheckIn checkIn);
     @Insert("Insert into checkin (CID,STUID,stuname,checktime,checklocation) values(#{CID},#{STUID},#{StuName},#{CheckTime},#{CheckLocation})")

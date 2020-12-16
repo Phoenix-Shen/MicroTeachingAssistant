@@ -1,5 +1,7 @@
 package SSM.Domain;
 
+import com.alibaba.fastjson.JSON;
+
 public class Teacher {
     private int ID;
     private String name;
@@ -40,11 +42,6 @@ public class Teacher {
 
     @Override
     public String toString() {
-        return "Teacher{" +
-                "ID=" + ID +
-                ", name='" + name + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        return JSON.toJSONString(this);
     }
 }

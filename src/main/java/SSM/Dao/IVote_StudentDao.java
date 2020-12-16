@@ -15,10 +15,10 @@ public interface IVote_StudentDao {
     List<Vote_Student> findAll();
     @Select("select * from vote_student where VID=#{VID}")
     List<Vote_Student> findOneVoteResult(@Param("VID")int VID);
-    @Update("update vote_student set choice=#{choice} where VID=#{VID} and SID=#{SID}")
+    @Update("update vote_student set choice=#{choice} where VID=#{VID} and SName=#{SName}")
     void updateVoteOption(Vote_Student vote_student);
-    @Insert("insert into vote_student (VID,SID,choice) values(#{VID},#{SID},#{choice})")
+    @Insert("insert into vote_student (VID,SName,choice) values(#{VID},#{SName},#{choice})")
     void createVoteOption(Vote_Student vote_student);
-    @Delete("delete from vote_student where VID=#{VID} and SID=#{SID}")
-    void deleteVote(@Param("VID")int VID,@Param("SID")int SID);
+    @Delete("delete from vote_student where VID=#{VID} and SName=#{SName}")
+    void deleteVote(@Param("VID")int VID,@Param("SName")String SName);
 }

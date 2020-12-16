@@ -10,6 +10,6 @@ public interface TeacherService {
     List<Teacher> findAll()throws SQLException;
     void createTeacher(Teacher teacher)throws SQLException;
     void deleteTeacher(int ID)throws SQLException;
-    Teacher findOne(int ID) throws SQLException;
+    Teacher findOne(String name) throws SQLException;
     void updateTeacher(Teacher teacher);
 }

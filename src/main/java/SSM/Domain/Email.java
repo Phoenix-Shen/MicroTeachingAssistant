@@ -1,5 +1,7 @@
 package SSM.Domain;
 
+import com.alibaba.fastjson.JSON;
+
 import java.util.Date;
 
 public class Email {
@@ -51,12 +53,6 @@ public class Email {
 
     @Override
     public String toString() {
-        return "Email{" +
-                "EID=" + EID +
-                ", TID=" + TID +
-                ", Sender='" + Sender + '\'' +
-                ", SendTime=" + SendTime +
-                ", ETitle='" + ETitle + '\'' +
-                '}';
+        return JSON.toJSONString(this);
     }
 }

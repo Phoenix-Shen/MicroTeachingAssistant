@@ -40,9 +40,18 @@ public class Vote_StudentController {
         return "succeed";
     }
     @RequestMapping("/deleteVote")
-    public @ResponseBody String deleteVote(@RequestBody int VID,@RequestBody int SID){
-        vote_studentService.deleteVote(VID,SID);
+    public @ResponseBody String deleteVote(@RequestBody int VID,@RequestBody String SName){
+        vote_studentService.deleteVote(VID,SName);
         return "succeed";
     }
+    @RequestMapping("/createVoteOptions")
+    @ResponseBody String createVoteOptions(@RequestBody List<Vote_Student>list){
+        for ( Vote_Student tmp:list ) {
+            vote_studentService.createVoteOption(tmp);
+        }
+        return "succeed";
+    }
+
+
 
 }

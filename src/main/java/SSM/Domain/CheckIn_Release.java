@@ -1,7 +1,10 @@
 package SSM.Domain;
 
-import java.util.Date;
+import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
+
+import java.util.Date;
 public class CheckIn_Release {
     private int CID;
     private int TID;
@@ -51,12 +54,6 @@ public class CheckIn_Release {
 
     @Override
     public String toString() {
-        return "CheckIn_Release{" +
-                "CID=" + CID +
-                ", TID=" + TID +
-                ", title='" + title + '\'' +
-                ", StartTime=" + StartTime +
-                ", EndTime=" + EndTime +
-                '}';
+        return JSON.toJSONString(this);
     }
 }

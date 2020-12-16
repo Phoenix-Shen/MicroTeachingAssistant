@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 /*private int CID;
-    private int TID;
+    private int tID;
     private String title;
     private Date StartTime;
     private Date EndTime;*/
@@ -25,4 +25,6 @@ public interface ICheckIn_ReleaseDao {
     CheckIn_Release findOne(@Param("CID")int CID) throws SQLException;
     @Update("update checkin_release set TID=#{TID} , title=#{title} , starttime=#{StartTime} , endtime=#{EndTime} where CID=#{CID}")
     void updateCheckIn_Release(CheckIn_Release checkInRelease);
+    @Select("Select * from checkin_release where TID=#{TID}")
+    List<CheckIn_Release>findCheckInByTeacher(@Param("TID")int tID) throws SQLException;
 }

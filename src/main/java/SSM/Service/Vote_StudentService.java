@@ -10,5 +10,5 @@ public interface Vote_StudentService {
     List<Vote_Student> findOneVoteResult(int VID);
     void updateVoteOption(Vote_Student vote_student);
     void createVoteOption(Vote_Student vote_student);
-    void deleteVote(int VID,int SID);
+    void deleteVote(int VID,String SName);
 }

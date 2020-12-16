@@ -1,8 +1,10 @@
 package SSM.Domain;
 
+import com.alibaba.fastjson.JSON;
+
 public class Vote_Student {
     private int VID;
-    private int SID;
+    private String SName;
     private String choice;
 
     public int getVID() {
@@ -13,12 +15,12 @@ public class Vote_Student {
         this.VID = VID;
     }
 
-    public int getSID() {
-        return SID;
+    public String getSName() {
+        return SName;
     }
 
-    public void setSID(int SID) {
-        this.SID = SID;
+    public void setSName(String SName) {
+        this.SName = SName;
     }
 
     public String getChoice() {
@@ -31,10 +33,6 @@ public class Vote_Student {
 
     @Override
     public String toString() {
-        return "Vote_Student{" +
-                "VID=" + VID +
-                ", SID=" + SID +
-                ", choice='" + choice + '\'' +
-                '}';
+        return JSON.toJSONString(this);
     }
 }

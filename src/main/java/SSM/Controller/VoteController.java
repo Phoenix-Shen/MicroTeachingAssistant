@@ -3,6 +3,7 @@ package SSM.Controller;
 import SSM.Domain.Vote;
 import SSM.Domain.VoteOption;
 import SSM.Service.VoteService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -48,7 +49,10 @@ public class VoteController {
         voteService.deleteVote(VID);
         return "succeed";
     }
-
+    @RequestMapping("/findVoteByTID")
+    @ResponseBody List<Vote> findVoteByTID(@RequestBody int tID){
+        return voteService.findVoteByTID(tID);
+    }
     @RequestMapping("/createVoteWithOptions")
     public @ResponseBody String createVoteWithOptions(@RequestBody Map<String,Object>map){
         //未实现的功能

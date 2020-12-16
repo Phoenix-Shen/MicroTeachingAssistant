@@ -62,4 +62,14 @@ public class EmailDaoTest {
         iemailDao = (IEmailDao) ac.getBean("IEmailDao");
         iemailDao.deleteEmail(1);
     }
+    @Test
+    public void findEmaillByTeacher(){
+        ApplicationContext ac = new ClassPathXmlApplicationContext("SqlMappingConfig.xml");
+        iemailDao = (IEmailDao) ac.getBean("IEmailDao");
+        List<Email> emailList = iemailDao.findEmailByTeacher(3);
+        for (Email e:emailList
+        ) {
+            System.out.println(e.getETitle());
+        }
+    }
 }

@@ -36,7 +36,7 @@ public class TeacherDaoTest {
     }
 
     @Test
-    public void updateTeacher() throws SQLException{
+    public void updateTeacher(){
         ApplicationContext ac = new ClassPathXmlApplicationContext("classpath:SqlMappingConfig.xml");
         ITeacherDao iTeacherDao = (ITeacherDao)ac.getBean("ITeacherDao");
         Teacher teacher = new Teacher();
@@ -70,7 +70,7 @@ public class TeacherDaoTest {
     public void findOne() throws SQLException {
         ApplicationContext ac = new ClassPathXmlApplicationContext("classpath:SqlMappingConfig.xml");
         ITeacherDao iTeacherDao = (ITeacherDao)ac.getBean("ITeacherDao");
-        Teacher teacher = iTeacherDao.findOne(3);
+        Teacher teacher = iTeacherDao.findOne("laoshi");
         System.out.println(teacher.getName());
     }
 }

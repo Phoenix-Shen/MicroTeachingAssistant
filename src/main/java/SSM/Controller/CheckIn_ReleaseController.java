@@ -3,17 +3,21 @@ import SSM.Domain.CheckIn_Release;
 import SSM.Service.CheckIn_ReleaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 老师发布签到
  */
 @Controller
+@CrossOrigin
 @RequestMapping("/CheckIn_Release")
 public class CheckIn_ReleaseController {
 
@@ -34,8 +38,8 @@ public class CheckIn_ReleaseController {
     }
 
     @RequestMapping("/createCheckIn_Release")
-    public @ResponseBody String createCheckIn_Release(@RequestBody CheckIn_Release checkInRelease)throws SQLException{
-        checkIn_ReleaseService.createCheckIn_Release(checkInRelease);
+    public @ResponseBody String createCheckIn_Release(@RequestBody CheckIn_Release checkIn_release)throws SQLException{
+        checkIn_ReleaseService.createCheckIn_Release(checkIn_release);
         return "succeed";
     }
     @RequestMapping("/deleteCheckIn_Release")
@@ -47,6 +51,11 @@ public class CheckIn_ReleaseController {
     public @ResponseBody String updateCheckIn_Release(@RequestBody CheckIn_Release checkInRelease){
         checkIn_ReleaseService.updateCheckIn_Release(checkInRelease);
         return "succeed";
+    }
+
+    @RequestMapping("/findCheckInByTeacher")
+    public @ResponseBody List<CheckIn_Release> findCheckInByTeacher(@RequestBody int CID) throws SQLException {
+        return checkIn_ReleaseService.findCheckInByTeacher(CID);
     }
 
 

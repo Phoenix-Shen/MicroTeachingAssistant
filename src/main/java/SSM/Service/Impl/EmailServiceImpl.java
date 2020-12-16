@@ -40,4 +40,9 @@ public class EmailServiceImpl implements EmailService {
     public void deleteEmail(int EID) {
         iEmailDao.deleteEmail(EID);
     }
+
+    @Override
+    public List<Email> findEmailByTeacher(int tID) {
+        return iEmailDao.findEmailByTeacher(tID);
+    }
 }

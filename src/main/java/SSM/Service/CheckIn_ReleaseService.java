@@ -11,4 +11,5 @@ public interface CheckIn_ReleaseService {
     void deleteCheckIn_Release(int CID)throws SQLException;
     CheckIn_Release findOne(int CID) throws SQLException;
     void updateCheckIn_Release(CheckIn_Release checkInRelease);
+    List<CheckIn_Release>findCheckInByTeacher(int tID)throws SQLException;
 }

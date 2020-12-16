@@ -1,13 +1,17 @@
 package SSM.Controller;
 
 import SSM.Domain.Email;
+import SSM.Domain.Teacher;
 import SSM.Service.EmailService;
+import SSM.Service.TeacherService;
+import SSM.Utils.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
@@ -18,9 +22,11 @@ import java.util.Map;
 @RequestMapping("/Email")
 public class EmailController {
     private final EmailService emailService;
+    private final TeacherService teacherService;
     @Autowired
-    public EmailController(EmailService emailService){
+    public EmailController(EmailService emailService,TeacherService teacherService){
         this.emailService=emailService;
+        this.teacherService=teacherService;
     }
     @RequestMapping("findAll")
     public @ResponseBody List<Email> findAll(){
@@ -46,10 +52,20 @@ public class EmailController {
         emailService.deleteEmail(EID);
         return "succeed";
     }
+    @RequestMapping("/findEmailByTeacher")
+    @ResponseBody
+    List<Email> findEmailByTeacher(@RequestBody int tID){
+        return emailService.findEmailByTeacher(tID);
+    }
 
     @RequestMapping("sendEmail")
-    public @ResponseBody String sendEmail(@RequestBody Map<String,Object> map){
-        //未实现的方法
+    public @ResponseBody String sendEmail(@RequestBody Map<String,Object> map) throws SQLException {
+        Email email = (Email)map.get("Email");
+        String context =(String)map.get("context");
+        String TName =(String)map.get("TName");
+        emailService.createEmail(email);
+        Teacher teacher=teacherService.findOne(TName);
+        Utils.sendEmail(email.getETitle(),context,teacher.getEmail());
         return "succeed";
     }
 }

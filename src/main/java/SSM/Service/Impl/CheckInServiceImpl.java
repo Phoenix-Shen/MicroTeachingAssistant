@@ -22,9 +22,16 @@ public class CheckInServiceImpl implements CheckInService {
     }
 
     @Override
+    public List<CheckIn> findOneListResult(int CID) {
+        return icheckInDao.findOneListResult(CID);
+    }
+
+    @Override
     public CheckIn findOne(int CID, int STUID) {
         return icheckInDao.findOne(CID,STUID);
     }
+
+
 
     @Override
     public void updateCheckIn(CheckIn checkIn) {

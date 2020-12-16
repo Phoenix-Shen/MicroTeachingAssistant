@@ -38,7 +38,7 @@ public class Vote_StudentServiceImpl implements Vote_StudentService {
     }
 
     @Override
-    public void deleteVote(int VID, int SID) {
-        iv_StudentDao.deleteVote(VID,SID);
+    public void deleteVote(int VID, String SName) {
+        iv_StudentDao.deleteVote(VID,SName);
     }
 }

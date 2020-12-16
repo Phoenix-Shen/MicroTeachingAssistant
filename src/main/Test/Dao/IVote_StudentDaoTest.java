@@ -16,7 +16,7 @@ public class IVote_StudentDaoTest {
 
         Vote_Student vs = new Vote_Student();
         vs.setVID(3);
-        vs.setSID(12222223);
+        vs.setSName("ddddd");
         vs.setChoice("777");
 
         iv_StudentDao.createVoteOption(vs);
@@ -31,7 +31,7 @@ public class IVote_StudentDaoTest {
         List<Vote_Student> votestu = iv_StudentDao.findOneVoteResult(2);
         for (Vote_Student vs :votestu
         ) {
-            System.out.printf(String.valueOf(vs.getSID()));
+            System.out.printf(String.valueOf(vs.getSName()));
         }
     }
 
@@ -43,7 +43,7 @@ public class IVote_StudentDaoTest {
         List<Vote_Student> votestu = iv_StudentDao.findAll();
         for (Vote_Student vs :votestu
         ) {
-            System.out.printf(String.valueOf(vs.getSID()));
+            System.out.printf(String.valueOf(vs.getSName()));
         }
     }
 
@@ -54,7 +54,7 @@ public class IVote_StudentDaoTest {
 
         Vote_Student vs = new Vote_Student();
         vs.setVID(2);
-        vs.setSID(12222222);
+        vs.setSName("ddddd");
         vs.setChoice("777");
 
         iv_StudentDao.updateVoteOption(vs);
@@ -65,6 +65,6 @@ public class IVote_StudentDaoTest {
         ApplicationContext ac = new ClassPathXmlApplicationContext("SqlMappingConfig.xml");
         iv_StudentDao = (IVote_StudentDao) ac.getBean("IVote_StudentDao");
 
-        iv_StudentDao.deleteVote(2,12222222);
+        iv_StudentDao.deleteVote(2,"ddddd");
     }
 }

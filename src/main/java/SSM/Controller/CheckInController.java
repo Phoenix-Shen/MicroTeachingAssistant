@@ -31,6 +31,12 @@ public class CheckInController {
     public @ResponseBody CheckIn findOne(@RequestBody int CID,@RequestBody int STUID){
         return checkInService.findOne(CID,STUID);
     }
+
+    @RequestMapping("/findOneListResult")
+    public @ResponseBody String findOneListResult(@RequestBody int CID){
+        checkInService.findOneListResult(CID);
+        return "succeed";
+    }
     @RequestMapping("/updateCheckIn")
     public @ResponseBody String updateCheckIn(@RequestBody CheckIn checkIn){
         checkInService.updateCheckIn(checkIn);

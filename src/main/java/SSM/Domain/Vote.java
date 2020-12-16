@@ -1,5 +1,7 @@
 package SSM.Domain;
 
+import com.alibaba.fastjson.JSON;
+
 import java.util.Date;
 
 public class Vote {
@@ -42,11 +44,6 @@ public class Vote {
 
     @Override
     public String toString() {
-        return "Vote{" +
-                "VID=" + VID +
-                ", TID=" + TID +
-                ", Theme='" + Theme + '\'' +
-                ", ReleaseTime=" + ReleaseTime +
-                '}';
+        return JSON.toJSONString(this);
     }
 }

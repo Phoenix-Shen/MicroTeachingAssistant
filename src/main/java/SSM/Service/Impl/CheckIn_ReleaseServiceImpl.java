@@ -48,4 +48,9 @@ public class CheckIn_ReleaseServiceImpl implements CheckIn_ReleaseService {
     public void updateCheckIn_Release(CheckIn_Release checkInRelease) {
         iCheckIn_releaseDao.updateCheckIn_Release(checkInRelease);
     }
+
+    @Override
+    public List<CheckIn_Release> findCheckInByTeacher(int tID) throws SQLException {
+        return iCheckIn_releaseDao.findCheckInByTeacher(tID);
+    }
 }

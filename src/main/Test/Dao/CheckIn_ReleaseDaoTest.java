@@ -44,7 +44,7 @@ public class CheckIn_ReleaseDaoTest {
     }
 
     @Test
-    public void updateCheckin() throws SQLException {
+    public void updateCheckin()  {
         ApplicationContext ac = new ClassPathXmlApplicationContext("SqlMappingConfig.xml");
         iCheckIn_releaseDao = (ICheckIn_ReleaseDao) ac.getBean("ICheckIn_ReleaseDao");
         CheckIn_Release cr = new CheckIn_Release();
@@ -69,5 +69,16 @@ public class CheckIn_ReleaseDaoTest {
         iCheckIn_releaseDao = (ICheckIn_ReleaseDao) ac.getBean("ICheckIn_ReleaseDao");
         CheckIn_Release cr = iCheckIn_releaseDao.findOne(2);
         if(cr!=null){  System.out.println(cr.getTitle());}
+    }
+
+    @Test
+    public void findCheckInByTeacher() throws SQLException {
+        ApplicationContext ac = new ClassPathXmlApplicationContext("SqlMappingConfig.xml");
+        iCheckIn_releaseDao = (ICheckIn_ReleaseDao) ac.getBean("ICheckIn_ReleaseDao");
+        List<CheckIn_Release> checkList = iCheckIn_releaseDao.findCheckInByTeacher(2);
+        for (CheckIn_Release re : checkList
+        ) {
+            System.out.println(re.getTitle());
+        }
     }
 }

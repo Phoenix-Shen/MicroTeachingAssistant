@@ -35,8 +35,8 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    public Teacher findOne(int ID) throws SQLException {
-        return iTeacherDao.findOne(ID);
+    public Teacher findOne(String name) throws SQLException {
+        return iTeacherDao.findOne(name);
     }
 
     @Override

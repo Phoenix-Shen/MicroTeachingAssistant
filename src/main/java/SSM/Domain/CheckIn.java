@@ -1,5 +1,8 @@
 package SSM.Domain;
 
+import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class CheckIn {
@@ -51,12 +54,6 @@ public class CheckIn {
 
     @Override
     public String toString() {
-        return "CheckIn{" +
-                "CID=" + CID +
-                ", STUID=" + STUID +
-                ", StuName='" + StuName + '\'' +
-                ", CheckTime=" + CheckTime +
-                ", CheckLocation='" + CheckLocation + '\'' +
-                '}';
+        return JSON.toJSONString(this);
     }
 }

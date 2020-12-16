@@ -5,6 +5,7 @@ import SSM.Domain.Vote;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Date;
 import java.util.List;
@@ -21,7 +22,7 @@ public class IVoteDaoTest {
         ApplicationContext ac = new ClassPathXmlApplicationContext("SqlMappingConfig.xml");
         iVoteDao = (IVoteDao) ac.getBean("IVoteDao");
         Vote vote = new Vote();
-        vote.setTID(10);
+        vote.setTID(3);
         vote.setTheme("1111111");
         vote.setReleaseTime(new Date());
         iVoteDao.createVote(vote);
@@ -56,11 +57,21 @@ public class IVoteDaoTest {
         Vote vote = new Vote();
         vote.setVID(1);
         vote.setTID(3);
-        vote.setTheme("吃展玮肉113123");
+        vote.setTheme("13123");
         vote.setReleaseTime(new Date());
         iVoteDao.updateVote(vote);
     }
 
+    @Test
+    public void findVOteByTID(){
+        ApplicationContext ac = new ClassPathXmlApplicationContext("SqlMappingConfig.xml");
+        iVoteDao = (IVoteDao) ac.getBean("IVoteDao");
+        List<Vote> voteList = iVoteDao.findVoteByTID(3);
+        for (Vote e:voteList
+        ) {
+            System.out.println(e.getTheme());
+        }
+    }
     @Test
     public void deleteVote(){
         ApplicationContext ac = new ClassPathXmlApplicationContext("SqlMappingConfig.xml");

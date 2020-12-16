@@ -14,15 +14,15 @@ http://www.springframework.org/schema/tx
 http://www.springframework.org/schema/tx/spring-tx.xsd">
     <!--开启包的扫描-->
     <context:component-scan base-package="SSM">
-        <!--配置那些注解不扫描 只管Dao和Service层，不管Controller（表现层） 所以过滤掉Controller-->
+        <!--配置哪些注解不扫描 只管Dao和Service层，不管Controller（表现层） 所以过滤掉Controller-->
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
-
+<!--配置数据库连接-->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
         <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/assistant?serverTimezone=UTC"/>
         <property name="user" value="root"/>
-        <property name="password" value="asdf"/>
+        <property name="password" value="1234"/>
     </bean>
     <!-- session factory-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -32,19 +32,33 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
     <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="SSM.Dao"/>
     </bean>
-    <!--configure transaction manager-->
+    <!--configure transaction manager 事务控制-->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="dataSource"></property>
+        <property name="dataSource" ref="dataSource"/>
     </bean>
-    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+<!--    什么是事务：？ 是程序中一系列严密的操作，所有操作必须完成，或者不做，不能做一半（原子性）如果事务失败则回滚-->
+    <!--    配置事务的传播特性-->
+<!--    下面这一句transaction-manager可以不写，因为有ID为transactionManager的事务管理，可以不写，如果ID不是transactionManager则要特别说明-->
+<!--    transaction-manager="transactionManager"-->
+    <tx:advice id="txAdvice" >
         <tx:attributes>
+<!--            如果当前没有事务，就新建一个事务，如果已存在一个事务中，加入到这个事务中，这是最常见的选择-->
+<!--            符合以下命名的方法是一个规定成一个事务-->
+<!--            有灰色的字，表明是默认值 不需要声明-->
+<!--            <tx:method name="update*" propagation="REQUIRED"/>-->
             <tx:method name="find*" read-only="true"/>
-            <tx:method name="*" isolation="DEFAULT"/>
+            <tx:method name="update*" />
+            <tx:method name="delete*" />
+            <tx:method name="create*" />
+<!--            <tx:method name="*" isolation="DEFAULT"/>-->
         </tx:attributes>
     </tx:advice>
     <!--AOP enhance-->
+<!--    配置参与事务的类-->
     <aop:config>
-        <aop:advisor advice-ref="txAdvice" pointcut="execution(* SSM.Service.Impl.*ServiceImpl.*(..))"></aop:advisor>
+<!--        execution(* SSM.Service.Impl.*ServiceImpl.*(..))-->
+<!--                 返回值所有 ，包SSM.Service.Impl.所有的ServiceImpl下面的所有方法，参数为任意-->
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* SSM.Service.Impl.*ServiceImpl.*(..))"/>
     </aop:config>
 
 </beans>
