@@ -1,6 +1,7 @@
 package SSM.Domain;
 
 import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
@@ -34,11 +35,11 @@ public class Email {
     public void setSender(String sender) {
         Sender = sender;
     }
-
+    @JsonFormat(timezone = "GMT+8")
     public Date getSendTime() {
         return SendTime;
     }
-
+    @JsonFormat(timezone = "GMT+8")
     public void setSendTime(Date sendTime) {
         SendTime = sendTime;
     }

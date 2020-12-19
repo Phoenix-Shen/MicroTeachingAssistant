@@ -52,10 +52,9 @@ public class CheckIn_ReleaseController {
         checkIn_ReleaseService.updateCheckIn_Release(checkInRelease);
         return "succeed";
     }
-
     @RequestMapping("/findCheckInByTeacher")
-    public @ResponseBody List<CheckIn_Release> findCheckInByTeacher(@RequestBody int CID) throws SQLException {
-        return checkIn_ReleaseService.findCheckInByTeacher(CID);
+    public @ResponseBody List<CheckIn_Release> findCheckInByTeacher(@RequestBody int tID) throws SQLException {
+        return checkIn_ReleaseService.findCheckInByTeacher(tID);
     }
 
 

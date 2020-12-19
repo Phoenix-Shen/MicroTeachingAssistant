@@ -40,7 +40,7 @@ public class VoteController {
         return voteService.findAll();
     }
     @RequestMapping("/findOne")
-    public @ResponseBody Vote findOne(@RequestBody int VID){
+    public @ResponseBody Vote findOne(@RequestBody Integer VID){
         return voteService.findOne(VID);
     }
     @RequestMapping("/updateVote")

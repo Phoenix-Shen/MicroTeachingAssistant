@@ -35,19 +35,19 @@ public class CheckIn_Release {
     public void setTitle(String title) {
         this.title = title;
     }
-
+    @JsonFormat(timezone = "GMT+8")
     public Date getStartTime() {
         return StartTime;
     }
-
+    @JsonFormat(timezone = "GMT+8")
     public void setStartTime(Date startTime) {
         StartTime = startTime;
     }
-
+    @JsonFormat(timezone = "GMT+8")
     public Date getEndTime() {
         return EndTime;
     }
-
+    @JsonFormat(timezone = "GMT+8")
     public void setEndTime(Date endTime) {
         EndTime = endTime;
     }

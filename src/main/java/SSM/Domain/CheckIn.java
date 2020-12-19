@@ -35,11 +35,11 @@ public class CheckIn {
     public void setStuName(String stuName) {
         StuName = stuName;
     }
-
+    @JsonFormat(timezone = "GMT+8")
     public Date getCheckTime() {
         return CheckTime;
     }
-
+    @JsonFormat(timezone = "GMT+8")
     public void setCheckTime(Date checkTime) {
         CheckTime = checkTime;
     }

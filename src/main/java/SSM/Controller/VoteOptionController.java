@@ -29,7 +29,7 @@ public class VoteOptionController {
         return voteOptionService.findAll();
     }
     @RequestMapping("/findOneVoteOptions")
-    public @ResponseBody List<VoteOption> findOneVoteOptions(@RequestBody int VID){
+    public @ResponseBody List<VoteOption> findOneVoteOptions(@RequestBody Integer VID){
         return voteOptionService.findOneVoteOptions(VID);
     }
     @RequestMapping("/updateVoteOption")

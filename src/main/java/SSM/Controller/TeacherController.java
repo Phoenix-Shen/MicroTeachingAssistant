@@ -2,6 +2,7 @@ package SSM.Controller;
 
 import SSM.Domain.Teacher;
 import SSM.Service.TeacherService;
+import SSM.Utils.BadException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -29,8 +30,12 @@ public class TeacherController {
         return teacherService.findAll();
     }
     @RequestMapping("/findOne")
-    public @ResponseBody Teacher findOne(@RequestBody String name) throws SQLException{
-        return teacherService.findOne(name);
+    public @ResponseBody Teacher findOne(@RequestBody String name) throws SQLException, BadException {
+        Teacher teacher;
+        if((teacher =  teacherService.findOne(name))==null){
+            throw new BadException();
+        }
+        else {return teacher;   }
     }
 
     @RequestMapping("/createTeacher")

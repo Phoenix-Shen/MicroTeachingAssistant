@@ -1,6 +1,7 @@
 package SSM.Domain;
 
 import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
@@ -33,11 +34,11 @@ public class Vote {
     public void setTheme(String theme) {
         Theme = theme;
     }
-
+    @JsonFormat(timezone = "GMT+8")
     public Date getReleaseTime() {
         return ReleaseTime;
     }
-
+    @JsonFormat(timezone = "GMT+8")
     public void setReleaseTime(Date releaseTime) {
         ReleaseTime = releaseTime;
     }
