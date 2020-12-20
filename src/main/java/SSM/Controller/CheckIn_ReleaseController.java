@@ -2,6 +2,7 @@ package SSM.Controller;
 import SSM.Domain.CheckIn_Release;
 import SSM.Service.CheckIn_ReleaseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cglib.core.Converter;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -40,7 +41,8 @@ public class CheckIn_ReleaseController {
     @RequestMapping("/createCheckIn_Release")
     public @ResponseBody String createCheckIn_Release(@RequestBody CheckIn_Release checkIn_release)throws SQLException{
         checkIn_ReleaseService.createCheckIn_Release(checkIn_release);
-        return "succeed";
+        List<CheckIn_Release>checkIn_releaseList =checkIn_ReleaseService.findCheckInByTeacher(checkIn_release.getTID());
+        return  String.valueOf(checkIn_releaseList.get(checkIn_releaseList.size()-1).getCID());
     }
     @RequestMapping("/deleteCheckIn_Release")
     public @ResponseBody String deleteCheckIn_Release(@RequestBody int CID)throws SQLException{

@@ -56,7 +56,7 @@ public class EmailController {
     }
     @RequestMapping("/findEmailByTeacher")
     @ResponseBody
-    List<Email> findEmailByTeacher(@RequestBody Integer tID){
+    public List<Email> findEmailByTeacher(@RequestBody Integer tID){
         return emailService.findEmailByTeacher(tID);
     }
 

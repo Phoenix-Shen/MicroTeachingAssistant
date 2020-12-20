@@ -53,7 +53,7 @@ public class Vote_StudentController {
         return "succeed";
     }
     @RequestMapping("/createVoteOptions")
-    @ResponseBody String createVoteOptions(@RequestBody List<Vote_Student>list) throws Exception {
+    public @ResponseBody String createVoteOptions(@RequestBody List<Vote_Student>list) throws Exception {
         if(list.size()==0){
             //throw new org.springframework.http.converter.HttpMessageNotReadableException("ssss");
             throw new BadException();
@@ -65,7 +65,7 @@ public class Vote_StudentController {
     }
 
     @RequestMapping("/getOptionCounts")
-    @ResponseBody List<OptionCount> getOptionCounts(@RequestBody Integer VID){
+    public @ResponseBody List<OptionCount> getOptionCounts(@RequestBody Integer VID){
         List<Vote_Student>vote_students=vote_studentService.findOneVoteResult(VID);
         Iterator<Vote_Student> stu_iter =vote_students.iterator();
         HashMap<String,Integer>count =new HashMap<>();

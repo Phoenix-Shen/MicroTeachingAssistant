@@ -59,9 +59,10 @@ public class VoteController {
         return "succeed";
     }
     @RequestMapping("/findVoteByTID")
-    @ResponseBody List<Vote> findVoteByTID(@RequestBody int tID){
+    public @ResponseBody List<Vote> findVoteByTID(@RequestBody int tID){
         return voteService.findVoteByTID(tID);
     }
+
     @RequestMapping("/createVoteWithOptions")
     public @ResponseBody String createVoteWithOptions(@RequestBody Map<String,Object>map){
         System.out.println(map.get("vote"));
@@ -81,7 +82,7 @@ public class VoteController {
             option.setVID(VID_PUSH);
             voteOptionService.createVoteOption(option);
         }
-        return "succeed";
+        return String.valueOf(VID_PUSH);
     }
 
 }
