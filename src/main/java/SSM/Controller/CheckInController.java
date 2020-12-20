@@ -21,7 +21,7 @@ import java.util.List;
 @CrossOrigin
 @RequestMapping("/CheckIn")
 public class CheckInController {
-private final CheckIn_ReleaseService checkIn_releaseService;
+    private final CheckIn_ReleaseService checkIn_releaseService;
     private final CheckInService checkInService;
     @Autowired
     public CheckInController(CheckInService checkInService,CheckIn_ReleaseService checkIn_releaseService){
