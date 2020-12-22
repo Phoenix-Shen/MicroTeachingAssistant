@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-<a href="/CheckIn_Release/findAll">查询 所有</a>
+<a href="http://localhost:8080">进入主页</a>
 </body>
 </html>
