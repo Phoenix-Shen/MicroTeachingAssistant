@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Param;
 
 
 import java.util.List;
+import java.util.Map;
 
 public interface VoteService {
     List<Vote> findAll();
@@ -13,5 +14,6 @@ public interface VoteService {
     void createVote(Vote vote);
     void deleteVote(int VID);
     List<Vote> findVoteByTID(int tID);
+    String createVoteWithOptions(Map<String, Object> map);
 }
 

@@ -3,18 +3,12 @@ package SSM.Controller;
 import SSM.Domain.OptionCount;
 import SSM.Domain.Vote_Student;
 import SSM.Service.Vote_StudentService;
-import SSM.Utils.BadException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.swing.text.html.Option;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -54,39 +48,11 @@ public class Vote_StudentController {
     }
     @RequestMapping("/createVoteOptions")
     public @ResponseBody String createVoteOptions(@RequestBody List<Vote_Student>list) throws Exception {
-        if(list.size()==0){
-            //throw new org.springframework.http.converter.HttpMessageNotReadableException("ssss");
-            throw new BadException();
-        }
-        for ( Vote_Student tmp:list ) {
-            vote_studentService.createVoteOption(tmp);
-        }
-        return "succeed";
+        return vote_studentService.createVoteOptions(list);
     }
 
     @RequestMapping("/getOptionCounts")
     public @ResponseBody List<OptionCount> getOptionCounts(@RequestBody Integer VID){
-        List<Vote_Student>vote_students=vote_studentService.findOneVoteResult(VID);
-        Iterator<Vote_Student> stu_iter =vote_students.iterator();
-        HashMap<String,Integer>count =new HashMap<>();
-        Vote_Student tmp;
-        while(stu_iter.hasNext()){
-            tmp=stu_iter.next();
-            if(count.containsKey(tmp.getChoice())){
-                count.replace(tmp.getChoice(),count.get(tmp.getChoice())+1);
-            }
-            else{
-                count.put(tmp.getChoice(),1);
-            }
-        }
-
-        List<OptionCount>optionCountList =new ArrayList<>();
-
-        count.forEach((key,value)->{
-            OptionCount optionCountTmp=new OptionCount(key,value);
-            optionCountList.add(optionCountTmp);
-        });
-
-        return optionCountList;
+        return vote_studentService.getOptionCounts(VID);
     }
 }

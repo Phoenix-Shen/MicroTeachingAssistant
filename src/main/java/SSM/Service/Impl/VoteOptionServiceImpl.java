@@ -1,12 +1,11 @@
 package SSM.Service.Impl;
-
 import SSM.Dao.IVoteOptionDao;
 import SSM.Domain.VoteOption;
 import SSM.Service.VoteOptionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
+
 
 @Service("voteOptionService")
 public class VoteOptionServiceImpl implements VoteOptionService {
@@ -41,4 +40,6 @@ public class VoteOptionServiceImpl implements VoteOptionService {
     public void deleteVote(int VID, String choice) {
         ivOptionDao.deleteVote(VID,choice);
     }
+
+
 }

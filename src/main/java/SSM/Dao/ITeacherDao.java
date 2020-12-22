@@ -21,7 +21,7 @@ public interface ITeacherDao {
     @Delete("Delete from teacher where id=#{ID}")
     void deleteTeacher(@Param("ID")int ID)throws SQLException;
     @Select("Select * from teacher where name=#{name}")
-    Teacher findOne(@Param("name")String name) throws SQLException;
+    Teacher findOne(@Param("name") String name) throws SQLException;
     @Update("update teacher set name=#{name} , password=#{password} , email=#{email} where ID=#{ID}")
     void updateTeacher(Teacher teacher);
 }

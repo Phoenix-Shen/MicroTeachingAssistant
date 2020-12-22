@@ -22,7 +22,7 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
         <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/assistant?serverTimezone=Asia/Shanghai"/>
         <property name="user" value="root"/>
-        <property name="password" value="1234"/>
+        <property name="password" value="asdf"/>
     </bean>
     <!-- session factory-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

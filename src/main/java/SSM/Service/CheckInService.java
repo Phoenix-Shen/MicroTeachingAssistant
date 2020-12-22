@@ -1,8 +1,8 @@
 package SSM.Service;
 
 import SSM.Domain.CheckIn;
-import org.apache.ibatis.annotations.Param;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface CheckInService {
@@ -10,6 +10,6 @@ public interface CheckInService {
     CheckIn findOne(int CID, int STUID);
     List<CheckIn>findOneListResult(int CID);
     void updateCheckIn(CheckIn checkIn);
-    void createCheckIn(CheckIn checkIn);
+    String createCheckIn(CheckIn checkIn) throws SQLException;
     void deleteCheckIn(int CID,int STUID);
 }

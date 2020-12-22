@@ -30,8 +30,10 @@ public class CheckIn_ReleaseServiceImpl implements CheckIn_ReleaseService {
     }
 
     @Override
-    public void createCheckIn_Release(CheckIn_Release checkInRelease) throws SQLException {
+    public String createCheckIn_Release(CheckIn_Release checkInRelease) throws SQLException {
         iCheckIn_releaseDao.createCheckIn_Release(checkInRelease);
+        List<CheckIn_Release>checkIn_releaseList =iCheckIn_releaseDao.findCheckInByTeacher(checkInRelease.getTID());
+        return  String.valueOf(checkIn_releaseList.get(checkIn_releaseList.size()-1).getCID());
     }
 
     @Override

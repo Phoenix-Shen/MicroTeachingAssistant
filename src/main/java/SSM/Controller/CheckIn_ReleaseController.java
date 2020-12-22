@@ -2,17 +2,14 @@ package SSM.Controller;
 import SSM.Domain.CheckIn_Release;
 import SSM.Service.CheckIn_ReleaseService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cglib.core.Converter;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.List;
-import java.util.Map;
+
 
 /**
  * 老师发布签到
@@ -40,9 +37,7 @@ public class CheckIn_ReleaseController {
 
     @RequestMapping("/createCheckIn_Release")
     public @ResponseBody String createCheckIn_Release(@RequestBody CheckIn_Release checkIn_release)throws SQLException{
-        checkIn_ReleaseService.createCheckIn_Release(checkIn_release);
-        List<CheckIn_Release>checkIn_releaseList =checkIn_ReleaseService.findCheckInByTeacher(checkIn_release.getTID());
-        return  String.valueOf(checkIn_releaseList.get(checkIn_releaseList.size()-1).getCID());
+        return  checkIn_ReleaseService.createCheckIn_Release(checkIn_release);
     }
     @RequestMapping("/deleteCheckIn_Release")
     public @ResponseBody String deleteCheckIn_Release(@RequestBody int CID)throws SQLException{
